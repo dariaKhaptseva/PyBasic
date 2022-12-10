@@ -1,13 +1,16 @@
 '''
-3. Дано целое, положительное, трёхзначное число. Например: 123, 867, 374.
-Необходимо его перевернуть. Например, если ввели число 123,
- то должно получиться на выходе ЧИСЛО 321. ВАЖНО! Работать только с числами. Строки использовать НЕЛЬЗЯ!
+
 
 *(НЕОБЯЗАТЕЛНО! НА ОЦЕНКУ НЕ ВЛИЯЕТ)
 Микропроцессор электронных часов считает количество секунд прошедших от начала суток
 (значение вводится с клавиатуры пользователем). Необходимо написать программу отображающую время
  в формате чч:мм:сс. Например: 9375 -> 2:36:15
 '''
+import datetime
+from time import strftime
+from datetime import timedelta
+
+import seconds as seconds
 
 print ('Задача 1')
 n =  int(input('Введіть кількість школярів: '))
@@ -31,3 +34,8 @@ new_number2 = receive_first_two_num%10
 new_number1 = receive_first_two_num//10
 new_number3 = users_number%receive_first_two_num
 print(new_number3,new_number2,new_number1)
+
+print ('Задача 4')
+
+time_seconds = timedelta (seconds = int(input('Введіть час в секундах: ')))
+print (time_seconds)
