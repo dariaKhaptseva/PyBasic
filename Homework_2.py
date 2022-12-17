@@ -1,8 +1,14 @@
 
+
+
+
+
+
+
+
 import datetime
 from time import strftime
 from datetime import timedelta
-
 import seconds as seconds
 
 print ('Задача 1')
@@ -18,15 +24,18 @@ first_class_pupils_cnt =  int(input('Введіть кількість школ�
 second_class_pupils_cnt =  int(input('Введіть кількість школярів в класі 2: '))
 third_class_pupils_cnt =  int(input('Введіть кількість школярів в класі 3: '))
 total_pupils = first_class_pupils_cnt+second_class_pupils_cnt+third_class_pupils_cnt
-print (f'Кількість парт, що необхідно придбать:  {total_pupils//2+total_pupils%2}')
+print (f'Кількість парт, що необхідно придбать:  {first_class_pupils_cnt//2+first_class_pupils_cnt%2+second_class_pupils_cnt//2+second_class_pupils_cnt%2+third_class_pupils_cnt//2+third_class_pupils_cnt%2}')
 
 print ('Задача 3')
 users_number = int(input('Введіть ціле трьозначне число: '))
+
 receive_first_two_num = users_number//10
 new_number2 = receive_first_two_num%10
 new_number1 = receive_first_two_num//10
 new_number3 = users_number%receive_first_two_num
-print(new_number3,new_number2,new_number1)
+
+users_number2 = new_number1*100+new_number2*10+new_number3
+print(users_number2)
 
 print ('Задача 4')
 
