@@ -17,22 +17,56 @@
 Например: Маша нашла в лесу 7 грибОВ.
 Маша нашла в лесу 32 грибА.'''
 
-# ('Задача 1')
-
-x = str
-b = int
-c = int {a + b}
-d = int {a - b}
-
-#a = print(input('введіть перший операнд:  '))
-#x = print(input('введіть оператор:  '))
-#b = print(input('введіть другий операнд:  '))
 
 
-#if x == '+':
-   # print (c)
-#else:
-  #  print (d)
+
+#Task1
+a = float (input('Input your first number:  '))
+x = str (input('Input the operator +, -, *, /, **:  '))
+b = float (input('Input your second number:  '))
+c = a + b
+d = a - b
+e = a * b
+f = a / b
+g = a ** b
+if x == '+':
+    print (c)
+elif x == '-':
+    print (d)
+elif x == '*':
+    print (e)
+elif x == '/':
+    print (f)
+elif x == '**':
+    print (g)
+else:
+    print ('The operator not found')
+
+
+#Task2
+
+
+n = int (input('Input an integer number :  '))
+
+for x in range (1,n,1) :
+    y = int (x*x)
+    if y > n:
+        break
+    print (y, end = ' ')
+
+#Task3
+
+
+p = int (input('Input an integer number :  '))
+for i in range(2, (p//2)+1):
+        if p % i == 0:
+            print ('your number is NOT prime')
+            break
+else:
+    print ('your number is prime')
+
+
+
 
 
 
