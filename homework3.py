@@ -56,7 +56,7 @@ for x in range (1,n,1) :
 
 #Task3
 
-
+print(' ')
 p = int (input('Input an integer number :  '))
 for i in range(2, (p//2)+1):
         if p % i == 0:
@@ -64,6 +64,7 @@ for i in range(2, (p//2)+1):
             break
 else:
     print ('your number is prime')
+
 
 
 
