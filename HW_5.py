@@ -66,3 +66,20 @@ while counter > k-1:
 my_list5[k-1] = c
 my_list5.append(random.randint(1,10))
 print(my_list5)
+
+print()
+
+#6*
+
+my_list6 = [random.randint(1,10) for i in range(5)]
+my_list7 = [random.randint(1,10) for i in range(5)]
+print(my_list6)
+print(my_list7)
+my_list6.extend(my_list7)
+print(my_list6)
+
+un = {x for x in my_list6 if my_list6.count(x) == 1}
+print(un)
+print(len(un))
+
+
