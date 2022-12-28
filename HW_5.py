@@ -78,7 +78,7 @@ print(my_list7)
 my_list6.extend(my_list7)
 print(my_list6)
 
-un = {x for x in my_list6 if my_list6.count(x) == 1}
+un = [x for x in my_list6 if my_list6.count(x) == 1]
 print(un)
 print(len(un))
 
