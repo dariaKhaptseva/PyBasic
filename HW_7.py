@@ -1,4 +1,4 @@
-from typing import List, Any, Generator
+
 
 persons = [{'name': 'John', 'age': 15},
               {'name': 'Matilda', 'age': 18},
