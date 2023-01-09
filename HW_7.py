@@ -21,7 +21,7 @@ li_result=list()
 for x in range(q):
     if li_age[x] == result:
        li_result.append(li_name[x])
-print('1a', li_result)
+print('1a - ', li_result)
 print()
 
 #1b
@@ -30,14 +30,14 @@ l = len(max(li_name))
 for y in li_name:
     if len(y) == l:
         li_result2.append(y)
-print('1b', li_result2)
+print('1b - ', li_result2)
 print()
 
 #1c
 a = float
 for a in li_age:
     a = sum(li_age)/len(li_age)
-print('1c', a)
+print('1c - ', a)
 print()
 
 #2
@@ -51,17 +51,17 @@ li2 = list(my_dict2.keys())
 li3 = (li1+li2)
 non_un = [x for x in li3 if li3.count(x) != 1]
 un = [x for x in li3 if li3.count(x) == 1]
-print('2a-', non_un)
+print('2a - ', non_un)
 print()
 
 #2b)
 res2 = [y for y in li1 if li2.count(y)==0]
-print('2b-', res2)
+print('2b - ', res2)
 print()
 
 #2c)
 res3 = {k: my_dict1.get(k) for k in res2 }
-print('2c-', res3)
+print('2c - ', res3)
 print()
 
 #2d)
