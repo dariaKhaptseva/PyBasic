@@ -1,29 +1,33 @@
-#*4. Дан список my_list. СОЗДАТЬ НОВЫЙ список new_list у которого первый элемент из my_list стоит на последнем месте.
- #Если my_list [1,2,3,4], то new_list [2,3,4,1]
+import csv
 
-import random
-my_list = [random.randint(1,10) for i in range(10)]
-new_list =[]
-print (my_list)
-new_list.append(my_list[-1]) #create list with last
-new_list2 = my_list[:-1] #cut the last
-new_list.extend(new_list2) #join
-print (new_list)
-print()
-#6**5. Дан список my_list. В ЭТОМ списке первый элемент переставить на последнее место.[1,2,3,4] -> [2,3,4,1].
-#Пересоздавать список нельзя! (используйте метод pop)
-my_list5 = [random.randint(1,10) for i in range(10)]
-print (my_list5)
-my_list5.append(my_list5.pop(0))
-print(my_list5)
-print()
-#*6. Дана строка в которой есть числа (разделяются пробелами). Например "43 больше чем 34, но меньше чем 56".
-#Найти сумму ВСЕХ ЧИСЕЛ (А НЕ ЦИФР) в этой строке. Для данного примера ответ - 133.
-#(используйте split и проверку isdigit)
-my_str = ('43 jkmit 34, но меньше 56')
-li = list (my_str.split())
-print (li)
-if li[] is
-print(my_str.isdigit())
-#print(li.digit)
+with open('files/test.csv', 'wt') as file:
+     writer = csv.DictWriter(file, fieldnames=user.keys(), delimiter=';')
+     writer.writeheader()
+     writer.writerow(user)
 
+
+def read_from_csv(filename: str) -> list:
+    data = []
+    with open(filename, 'r') as file:
+        reader = csv.reader(file, delimiter=';')
+        for row in reader:
+            data.append(row)
+    return data
+
+
+def write_to_csv(filename: str, data: list):
+    with open(filename, 'w', newline='') as file:
+        writer = csv.writer(file, delimiter=';')
+        for row in data:
+            writer.writerow(row)
+
+
+def add_grade_to_stud_list(subj: str):
+    student_list = read_from_csv('files/Книга2.csv')
+    student_list[0].append(subj)
+    for stud_number in range(1, len(student_list)):
+        student_list[stud_number].append(randint(1, 13))
+    write_to_csv('files/Книга2.csv', student_list)
+
+
+add_grade_to_stud_list('Физкультура')
