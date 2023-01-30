@@ -23,13 +23,13 @@ data = re.sub(r'(?i)(the|sleep)\b','---', data)
 new_file.write(data)
 
 #2
-def words_count_index() -> dict:
-    """
-    This function return count of
-    each word in file and make it an index
+#def words_count_index() -> dict:
+    #"""
+    #This function return count of
+    #each word in file and make it an index
 
-    :return: result
-    """
+    #:return: result
+    #"""
 
 result = dict()
 data4 = list()
