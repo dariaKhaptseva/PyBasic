@@ -1,37 +1,55 @@
+
+import json
+
 class Employee:
     """
     documentation
     """
-    first_name = str()
-    last_name = str()
+
+    firstname = str()
+    lastname = str()
+    age = int()
     email = str()
     skills = list()
     people_lang = list()
     coding_lang = list()
 
-obj = Employee()
+    def __init__(self,
+                 firstname: str,
+                 lastname: str,
+                 age: int,
+                 email: str,
+                 skills: list,
+                 people_lang: list,
+                 coding_lang: list):
+        self.firstname = firstname
+        self.lastname = lastname
+        self.age = age
+        self.email = email
+        self.skills = skills
+        self.people_lang = people_lang
+        self.coding_lang = coding_lang
+
+    def write_employee_json():
+        """
 
 
-#def __init__ (self, first_name: str, last_name: str, age: int, email:str,skills:list, people_lang:list, coding_lang:list):
- #  self.last_name = last_name
-  #  self.age = age
-   # self.email = email
-    #self.skills = skills
-  #  self.people_lang = people_lang
-   # self.coding_lang = coding_lang
-        #print('employee!')
+        :return:
+        """
+        with open("/Users/daria.khaptseva/PycharmProjects/PyBasic/employee2.json", 'w') as file:
+            data = {'firstname': firstname,
+                    'lastname': self.lastname,
+                    'age': self.age,
+                    'email': self.email,
+                    'skills': self.skills,
+                    'people_lang': self.people_lang,
+                    'coding_lang': self.coding_lang}
 
-obj = Employee ('Ivan', 'Teles', 27, 'ivanteles@gmail.com', ['working','coding'],['uk','en'],['python','java'])
-print(obj)
-obj.email='ivanteles@gmail.com'
-print(obj.email)
-
+            json.dumps(data,file)
 
 
 
+    write_employee_json()
 
 
-#import json
 
-#with open("/Users/daria.khaptseva/PycharmProjects/PyBasic/employee.json", 'w') as file:
-    #json.dump(obj, file)
